@@ -15,8 +15,6 @@ echo "### Install ngrok ###"
 
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
 unzip ngrok-stable-linux-386.zip
-ping `pwd`.ff102e70.dns.1433.eu.org
-echo pwd
 echo $(pwd)
 chmod +x ./ngrok
 
