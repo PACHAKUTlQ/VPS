@@ -17,25 +17,25 @@ jobs:
     - name: Test foreground
       uses: NyaMisty/reverse-rdp-windows-github-actions-ng@master
       with:
-        ngrok-token: ${{ secrets.NGROK_TOKEN }}
-        password: 82148086
+        ngrok-token: ${{ secrets.NGROK_AUTH_TOKEN }}
+        password: ${{ secrets.USER_PASS }}
     # ngrok should exit now
     - name: Test background
       uses: NyaMisty/reverse-rdp-windows-github-actions-ng@master
       with:
-        ngrok-token: ${{ secrets.NGROK_TOKEN }}
-        password: 82148086
+        ngrok-token: ${{ secrets.NGROK_AUTH_TOKEN }}
+        password: ${{ secrets.USER_PASS }}
         foreground: false
     # ngrok should be still running, so this should not create new ngrok, but should detects ngrok exit correctly
     - name: Test foreground
       uses: NyaMisty/reverse-rdp-windows-github-actions-ng@master
       with:
-        ngrok-token: ${{ secrets.NGROK_TOKEN }}
-        password: 82148086
+        ngrok-token: ${{ secrets.NGROK_AUTH_TOKEN }}
+        password: ${{ secrets.USER_PASS }}
     # post check should be working
     - name: Test background
       uses: NyaMisty/reverse-rdp-windows-github-actions-ng@master
       with:
-        ngrok-token: ${{ secrets.NGROK_TOKEN }}
-        password: 82148086
+        ngrok-token: ${{ secrets.NGROK_AUTH_TOKEN }}
+        password: ${{ secrets.USER_PASS }}
         foreground: false
